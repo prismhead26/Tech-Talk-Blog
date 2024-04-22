@@ -1,0 +1,201 @@
+/* * {
+    background-color: slategrey;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+body{
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-family: 'Noto Serif', serif;
+  background-color: black;
+}
+p, h1, h2, h3, a, ul{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #966F33;
+}
+
+/* nav & footer styles */
+nav{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+nav li{
+  list-style-type: none;
+  margin-left: 20px;
+}
+nav h1{
+  font-size: 3em;
+}
+nav p, nav a{
+  color: black;
+  font-weight: 300;
+  color: #966F33;
+}
+nav a:hover {
+  text-decoration: crimson underline;
+}
+nav ul a:hover{
+  color: aqua;
+  text-decoration: none;
+}
+footer{
+  color: black;
+  text-align: center;
+  margin: 80px auto 20px;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2{
+  margin-bottom: 40px;
+  padding: 10px;
+}
+h3{
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+.content{
+  margin-left: 20px;
+}
+/* index styles */
+.forums {
+  display: block;
+  margin: 40px 0;
+  padding-left: 30px;
+  border-left: 6px solid crimson;
+}
+.forums a:hover h3{
+  color: crimson;
+}
+/* details styles */
+.details {
+  position: relative;
+}
+.delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: lightblue;
+  color: black;
+}
+.delete:hover {
+  cursor: pointer;
+  box-shadow: 3px 6px 9px lightgrey;
+}
+
+/* create styles */
+.create-forum {
+  color: #966F33;
+}
+.create-forum form{
+  max-width: 400px;
+  margin: 0 auto;
+}
+.create-forum input,
+.create-forum textarea{
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}
+.create-forum label{
+  display: block;
+  margin-top: 24px;
+}
+textarea{
+  height: 120px;
+}
+.create-forum button{
+  margin-top: 20px;
+  background: crimson;
+  color: white;
+  padding: 6px;
+  border: 0;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.single {
+  margin: 10px 0;
+}
+.forum-container {
+  margin: 20px 0;
+  border: 3px solid lightgrey;
+}
+.title{
+  font-size: 2.5rem;
+}
+.snippet {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+#title, #snippet, #body, #username {
+  background-color: whitesmoke;
+  border: 5px solid darkgrey;
+}
+label {
+  font-size: 2rem;
+}
+section, #aboutSection {
+  font-size: 1.6rem;
+  color: lawngreen;
+  text-align: center;
+}
+footer {
+  font-size: 1rem;
+  color: lawngreen;
+}
+a h2:hover{
+  text-decoration:crimson underline;
+}
+
+html {
+	height: 100%;
+	/* max-height: 600px; */
+	/* width: 1000px; */
+	background-color: hsla(200,40%,30%,.4);
+	background-image:		
+		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 100%,
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		2500px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	animation: 50s para infinite linear;
+	}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+		}
+	}

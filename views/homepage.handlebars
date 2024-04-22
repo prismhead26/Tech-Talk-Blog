@@ -1,0 +1,19 @@
+    <div class="forums content">
+        <h2>All Blogs</h2>
+
+        {{#if blogs.length}}
+            {{#each blogs}}
+                <div class="forum-container">
+                    <a class="single" href="./blog/{{id}}">
+                    </a>
+                        <section class="body">{{body}} </section>
+                    {{#each comments}}
+                        <section class="container my-2 border-bottom border-3 border-success">
+                            <p class="text-warning">{{description}}</p><br />
+                            <p class="text-warning fst-italic">   --{{user.name}} {{newDate}} </p>
+                        </section>
+                    {{/each}}
+                </div>
+            {{/each}}
+        {{/if}}
+    </div>
