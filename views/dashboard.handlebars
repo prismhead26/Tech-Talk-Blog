@@ -6,17 +6,18 @@
             <input type="text" id="title" name="title" required>
             <label for="body">Write your blog here:</label>
             <textarea id="body" name="body"></textarea>
-            <button>Submit</button>
+            <button type="submit">Create</button>
         </form>
     </div>
 
     {{#if blogs.length}}
-        <h3 class="text-center patient-list mb-5 fw-bold" style="color: #ff9999">Current Blogs:</h3>
-    {{/if}}
-    {{#each blogs}}
-        {{> blog-details}}
-    {{/each}}
-
+    <div class="blog-list">
+            <h3 class="text-center patient-list mb-5 fw-bold" style="color: #ff9999">Current Blogs:</h3>
+        {{/if}}
+        {{#each blogs}}
+            {{> blog-details}}
+        {{/each}}
+    </div>
     <script>
         function toggleForm() {
             var form = document.getElementById("create-form");
@@ -27,3 +28,4 @@
             }
         }
     </script>
+    <script src="./js/dashboard.js"></script>

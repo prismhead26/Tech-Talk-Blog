@@ -2,18 +2,54 @@
         <h2>All Blogs</h2>
 
         {{#if blogs.length}}
-            {{#each blogs}}
-                <div class="forum-container">
-                    <a class="single" href="./blog/{{id}}">
-                    </a>
-                        <section class="body">{{body}} </section>
-                    {{#each comments}}
-                        <section class="container my-2 border-bottom border-3 border-success">
-                            <p class="text-warning">{{description}}</p><br />
-                            <p class="text-warning fst-italic">   --{{user.name}} {{newDate}} </p>
-                        </section>
-                    {{/each}}
-                </div>
-            {{/each}}
+            {{#if logged_in}}
+                {{#each blogs}}
+                    <div class="forum-container" role="button" onclick=toggleForm()>
+                        <div class="forum-header">
+                            <h3>{{title}}</h3>
+                        </div>
+                            <section class="body">{{body}} </section>
+                        {{#each comments}}
+                            <section class="container my-2 border-bottom border-3 border-success">
+                                <p class="text-warning">{{description}}</p><br />
+                                <p class="text-warning fst-italic">   --{{user.name}} {{newDate}} </p>
+                            </section>
+                        {{/each}}
+                    </div>
+                    <div class="comment-form" style="display: none;">
+                        <form action="/comment" method="POST">
+                            <textarea name="comment" placeholder="Add a comment"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                {{/each}}
+            {{else}}
+                {{#each blogs}}
+                    <div class="forum-container">
+                        <div class="forum-header">
+                            <h3>{{title}}</h3>
+                        </div>
+                            <section class="body">{{body}} </section>
+                        {{#each comments}}
+                            <section class="container my-2 border-bottom border-3 border-success">
+                                <p class="text-warning">{{description}}</p><br />
+                                <p class="text-warning fst-italic">   --{{user.name}} {{newDate}} </p>
+                            </section>
+                        {{/each}}
+                    </div>
+                {{/each}}
+            {{/if}}
         {{/if}}
     </div>
+
+
+<script>
+    function toggleForm() {
+        var form = document.querySelector(".comment-form");
+        if (form.style.display === "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    }
+</script>
