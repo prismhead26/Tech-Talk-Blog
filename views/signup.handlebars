@@ -1,13 +1,13 @@
 <div class="container">
     <h2>Sign Up</h2>
-    <form action="/signup" method="POST" style="background-color: aquamarine;">
+    <form action="/api/users" style="background-color: aquamarine;">
         <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="name" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group signup-form">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="password">Password:</label>

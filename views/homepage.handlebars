@@ -4,7 +4,7 @@
         {{#if blogs.length}}
             {{#if logged_in}}
                 {{#each blogs}}
-                    <div class="forum-container" role="button" onclick=toggleForm()>
+                    <div class="forum-container" role="button" aria-controls="myCommentForm{{id}}" onclick=toggleForm()>
                         <div class="forum-header">
                             <h3>{{title}}</h3>
                         </div>
@@ -16,9 +16,9 @@
                             </section>
                         {{/each}}
                     </div>
-                    <div class="comment-form" style="display: none;">
+                    <div class="comment-form" id="myCommentForm{{id}}" style="display: none;">
                         <form action="/comment" method="POST">
-                            <textarea name="comment" placeholder="Add a comment"></textarea>
+                            <textarea name="comment" placeholder="Add a comment" data-id="{{id}}"></textarea>
                             <button type="submit">Submit</button>
                         </form>
                     </div>
@@ -53,3 +53,4 @@
         }
     }
 </script>
+<script src="./js/homepage.js"></script>

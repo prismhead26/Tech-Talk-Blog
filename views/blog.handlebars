@@ -14,34 +14,5 @@
     <input type="submit" value="Update">
 </form>
 
-<script>
-    document.getElementById("updateForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form submission
 
-  const title = document.querySelector("#title").value.trim();
-  const body = document
-    .querySelector("#body")
-    .value.trim();
-
-        // Send AJAX request to update the blog
-        fetch(event.target.action, {
-            method: event.target.method,
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({title: title, body: body})
-        })
-        .then(response => {
-            if (response.ok) {
-                // Blog updated successfully
-                alert("Blog updated successfully");
-            } else {
-                // Error updating blog
-                alert("Error updating blog");
-            }
-        })
-        .catch(error => {
-            console.error("Error updating blog:", error);
-        });
-    });
-</script>
+<script src="./js/blog.js"></script>
