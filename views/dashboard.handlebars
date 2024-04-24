@@ -1,7 +1,12 @@
+    <style>
+        html{
+            background-image: none;
+        }
+    </style>
     <div class="center">
-        <button style="margin: 2.5rem;" onclick="toggleForm()">Create a new Blog</button>
+        <button class="btn btn-primary" style="margin: 2.5rem;" onclick="toggleForm()">Create a new Blog</button>
     </div>
-    <div id="create-form" class="create-forum content" style="display: none;">
+    <div id="create-forum" class="create-forum content" style="display: none;">
         <form action="/api/blogs" method="POST">
             <label for="title">Give your blog a title:</label>
             <input type="text" id="title" name="title" required>
@@ -21,7 +26,7 @@
     </div>
     <script>
         function toggleForm() {
-            var form = document.getElementById("create-form");
+            var form = document.getElementById("create-forum");
             if (form.style.display === "none") {
                 form.style.display = "block";
             } else {

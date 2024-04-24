@@ -77,6 +77,51 @@ h3{
   text-transform: capitalize;
   margin-bottom: 8px;
 }
+form, footer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+button{
+  text-transform: none;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.btn-sm {
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+  width: 10em;
+}
 .center {
   display: flex;
   justify-content: center;
@@ -115,28 +160,28 @@ h3{
 }
 
 /* create styles */
-.create-forum {
+.create-forum, .comment-forum, .update-forum {
   color: #966F33;
 }
-.create-forum form{
+.create-forum form, .comment-forum form, .update-forum form{
   max-width: 400px;
   margin: 0 auto;
 }
-.create-forum input,
-.create-forum textarea{
+.create-forum input, .comment-forum input, .update-forum input,
+.create-forum textarea, .comment-forum textarea, .update-forum textarea{
   display: block;
   width: 100%;
   margin: 10px 0;
   padding: 8px;
 }
-.create-forum label{
+.create-forum label, .comment-forum label, .update-forum label{
   display: block;
   margin-top: 24px;
 }
 textarea{
   height: 120px;
 }
-.create-forum button{
+.create-forum button, .comment-forum button{
   margin-top: 20px;
   background: crimson;
   color: white;
@@ -155,6 +200,11 @@ textarea{
   flex-direction: column; 
   justify-content: center; 
   margin: 2rem;
+}
+.forum-header{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .title{
   font-size: 2.5rem;
@@ -188,7 +238,7 @@ html {
 	height: 100%;
 	/* max-height: 600px; */
 	/* width: 1000px; */
-	background-color: hsla(200,40%,30%,.4);
+	background-color: darkblue;
 	background-image:		
 		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
 		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),

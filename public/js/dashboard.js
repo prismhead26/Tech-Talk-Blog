@@ -22,6 +22,6 @@ const newFormHandler = async (event) => {
   };
 
   document
-    .querySelector('#create-form')
+    .querySelector('#create-forum')
     .addEventListener('submit', newFormHandler);
   

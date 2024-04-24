@@ -4,7 +4,7 @@
         {{#if blogs.length}}
             {{#if logged_in}}
                 {{#each blogs}}
-                    <div class="forum-container" role="button" aria-controls="myCommentForm{{id}}" >
+                    <div class="forum-container" role="button" aria-controls="myCommentForum{{id}}" >
                         <div class="forum-header">
                             <h3 style="font-size: 2.3rem;">{{title}}</h3>
                         </div>
@@ -15,10 +15,10 @@
                                 <p class="text-warning fst-italic">   --{{user.name}} {{newDate}} </p>
                             </section>
                         {{/each}}
-                        <button style="text-align: center;" data-id="myCommentForm{{id}}" onclick=toggleForm(event)>Add a Comment</button>
+                        <button class="btn btn-primary btn-sm" style="text-align: center; margin: 1rem" data-id="myCommentForum{{id}}" onclick=toggleForum(event)>Add a Comment</button>
                     </div>
-                    <div class="comment-form" id="myCommentForm{{id}}" style="display: none;">
-                        <form action="/comment" method="POST">
+                    <div class="comment-forum" id="myCommentForum{{id}}" style="display: none;">
+                        <form>
                             <textarea name="comment" placeholder="Add a comment" data-id="{{id}}"></textarea>
                             <button type="submit">Submit</button>
                         </form>
@@ -45,7 +45,7 @@
 
 
 <script>
-    function toggleForm(event) {
+    function toggleForum(event) {
         const commentId = document.querySelector(`#${event.target.dataset.id}`)
         console.log("target", commentId)
         if (commentId.style.display === "none") {
@@ -53,7 +53,7 @@
         } else {
             commentId.style.display = "none";
         }
-        const form = document.querySelectorAll(".comment-form");
+        const form = document.querySelectorAll(".comment-forum");
 
     }
 </script>
