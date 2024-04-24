@@ -16,6 +16,18 @@ p, h1, h2, h3, a, ul{
   color: #966F33;
 }
 
+a:link, a:visited {
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+
 /* nav & footer styles */
 nav{
   display: flex;
@@ -64,6 +76,12 @@ h2{
 h3{
   text-transform: capitalize;
   margin-bottom: 8px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
 }
 .content{
   margin-left: 20px;
@@ -130,9 +148,13 @@ textarea{
 .single {
   margin: 10px 0;
 }
-.forum-container {
+.forum-container, .blog-details {
   margin: 20px 0;
   border: 3px solid lightgrey;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  margin: 2rem;
 }
 .title{
   font-size: 2.5rem;

@@ -1,5 +1,6 @@
-    <h1>Create a new Blog</h1>
-    <button onclick="toggleForm()">Create a new Blog</button>
+    <div class="center">
+        <button style="margin: 2.5rem;" onclick="toggleForm()">Create a new Blog</button>
+    </div>
     <div id="create-form" class="create-forum content" style="display: none;">
         <form action="/api/blogs" method="POST">
             <label for="title">Give your blog a title:</label>
@@ -12,7 +13,7 @@
 
     {{#if blogs.length}}
     <div class="blog-list">
-            <h3 class="text-center patient-list mb-5 fw-bold" style="color: #ff9999">Current Blogs:</h3>
+            <h3 style="color: #ff9999; text-align: center; font-size: 2.5rem;">Current Blogs:</h3>
         {{/if}}
         {{#each blogs}}
             {{> blog-details}}

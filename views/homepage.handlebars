@@ -1,21 +1,21 @@
     <div class="forums content">
-        <h2>All Blogs</h2>
+        <h2 style="text-align: center; font-size: 3rem;">All Blogs</h2>
 
         {{#if blogs.length}}
             {{#if logged_in}}
                 {{#each blogs}}
                     <div class="forum-container" role="button" aria-controls="myCommentForm{{id}}" >
                         <div class="forum-header">
-                            <h3>{{title}}</h3>
+                            <h3 style="font-size: 2.3rem;">{{title}}</h3>
                         </div>
                             <section class="body">{{body}} </section>
                         {{#each comments}}
-                            <section class="container my-2 border-bottom border-3 border-success">
+                            <section style="border-bottom: 1rem dotted red; margin-top: 1rem;">
                                 <p class="text-warning">{{description}}</p><br />
                                 <p class="text-warning fst-italic">   --{{user.name}} {{newDate}} </p>
                             </section>
                         {{/each}}
-                        <button data-id="myCommentForm{{id}}" onclick=toggleForm(event)>Add a Comment</button>
+                        <button style="text-align: center;" data-id="myCommentForm{{id}}" onclick=toggleForm(event)>Add a Comment</button>
                     </div>
                     <div class="comment-form" id="myCommentForm{{id}}" style="display: none;">
                         <form action="/comment" method="POST">
@@ -28,11 +28,11 @@
                 {{#each blogs}}
                     <div class="forum-container">
                         <div class="forum-header">
-                            <h3>{{title}}</h3>
+                            <h3 style="font-size: 2.3rem;">{{title}}</h3>
                         </div>
                             <section class="body">{{body}} </section>
                         {{#each comments}}
-                            <section class="container my-2 border-bottom border-3 border-success">
+                            <section style="border-bottom: 0.5rem dotted red; margin-top: 1rem;">
                                 <p class="text-warning">{{description}}</p><br />
                                 <p class="text-warning fst-italic">   --{{user.name}} {{newDate}} </p>
                             </section>
