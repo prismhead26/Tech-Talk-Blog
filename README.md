@@ -41,14 +41,14 @@ Step 7: After the "Tech Talk Listening on port..." appears in the console, open 
 
 ## Links
 Screenshots:
-![Homepage](./public/images/homepage.png)
+![Homepage](./assets/images/homepage.png)
 
-![Dashboard](./public/images/dashboard.png)
+![Dashboard](./assets/images/dashboard.png)
 
-![Blog](./public/images/blog.png)
+![Blog](./assets/images/blog.png)
 
 Heroku link:
-[Heroku Link](https://blog-n-tell-527cfad2473f.herokuapp.com/)
+[Heroku Link](https://git.heroku.com/tech-talk-blogger.git)
 
 ## Features:
 Javascript variables, destructuring, classes and constructors, promises, try/catch methods, async/await methods, event delegation, etc.
